@@ -17,9 +17,5 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
-        $response = $this->get('/');
-
-        //* User must be authenticated in order to view the home page
-        $response->assertStatus(302);
     }
 }
