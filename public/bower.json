@@ -1,0 +1,22 @@
+{
+  "name": "comic_ng_panel_editor",
+  "authors": [
+    "afandiyusuf <afandi.yusuf.04@gmail.com>"
+  ],
+  "description": "panel editor untuk backend komikng",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "phaser": "^2.6.2"
+  }
+}

@@ -1,0 +1,17 @@
+image: php:5.6
+
+services:
+    - mysql:latest
+
+variables:
+  MYSQL_DATABASE: comic_ng
+  MYSQL_ROOT_PASSWORD: 123qweasd
+
+before_script:
+    - bash ci/docker_install.sh > /dev/null
+    - composer install --no-progress
+
+job1:
+    script:
+        - echo "SELECT 'OK';" | mysql --user=root --password="${MYSQL_ROOT_PASSWORD}" --host=mysql "${MYSQL_DATABASE}"
+        - php artisan migrate:refresh --seed

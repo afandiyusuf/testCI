@@ -1,0 +1,98 @@
+<?php
+
+use Illuminate\Database\Seeder;
+
+class Rating_seeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+         DB::table('rates')->insert([
+			[
+				"comic_id"=>1,
+				"user_id"=>1,
+				"rate"=>1
+			],
+			[
+				"comic_id"=>2,
+				"user_id"=>1,
+				"rate"=>1
+			],
+			[
+				"comic_id"=>3,
+				"user_id"=>1,
+				"rate"=>4
+			],
+			[
+				"comic_id"=>4,
+				"user_id"=>1,
+				"rate"=>2
+			],
+			[
+				"comic_id"=>1,
+				"user_id"=>2,
+				"rate"=>1
+			],
+			[
+				"comic_id"=>2,
+				"user_id"=>2,
+				"rate"=>2
+			],
+			[
+				"comic_id"=>3,
+				"user_id"=>2,
+				"rate"=>1
+			],
+			[
+				"comic_id"=>4,
+				"user_id"=>2,
+				"rate"=>5
+			],
+			[
+				"comic_id"=>1,
+				"user_id"=>3,
+				"rate"=>1
+			],
+			[
+				"comic_id"=>2,
+				"user_id"=>3,
+				"rate"=>1
+			],
+			[
+				"comic_id"=>3,
+				"user_id"=>3,
+				"rate"=>1
+			],
+			[
+				"comic_id"=>4,
+				"user_id"=>3,
+				"rate"=>1
+			],
+			[
+				"comic_id"=>1,
+				"user_id"=>4,
+				"rate"=>1
+			],
+			[
+				"comic_id"=>2,
+				"user_id"=>4,
+				"rate"=>5
+			],
+			[
+				"comic_id"=>3,
+				"user_id"=>4,
+				"rate"=>5
+			],
+			[
+				"comic_id"=>4,
+				"user_id"=>5,
+				"rate"=>5
+			],
+			
+        ]);
+    }
+}
