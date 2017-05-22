@@ -1,18 +1,14 @@
+language: php
+php:
+  - '5.6'
+
 services:
     - mysql
 
 before_script:
-    - sudo apt-get update -yqq
-    - sudo apt-get install -y -qq git curl wget php5-cli zip unzip
-    - sudo curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-    - sudo curl --location --output /usr/local/bin/phpunit https://phar.phpunit.de/phpunit.phar
-    - sudo chmod +x /usr/local/bin/phpunit
-    - sudo composer install --no-progress
+    - composer install
 
 job1:
     script:
         - sudo php artisan migrate:refresh --seed
 
-language: php
-php:
-  - '5.6'
