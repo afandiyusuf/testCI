@@ -1,9 +1,13 @@
 services:
-    - mysql:latest
+    - mysql
 
 before_script:
-    - bash ci/docker_install.sh > /dev/null
+    - sudo apt-get update -yqq
     - composer install --no-progress
+    - sudo apt-get install -y -qq git curl wget php5-cli zip unzip
+    - sudo curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+    - sudo curl --location --output /usr/local/bin/phpunit https://phar.phpunit.de/phpunit.phar
+    - sudo chmod +x /usr/local/bin/phpunit
 
 job1:
     script:
