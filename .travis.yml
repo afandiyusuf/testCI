@@ -3,7 +3,7 @@ services:
 
 before_script:
     - sudo apt-get update -yqq
-    - composer install --no-progress
+    - sudo composer install --no-progress
     - sudo apt-get install -y -qq git curl wget php5-cli zip unzip
     - sudo curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
     - sudo curl --location --output /usr/local/bin/phpunit https://phar.phpunit.de/phpunit.phar
@@ -11,8 +11,7 @@ before_script:
 
 job1:
     script:
-        - echo "SELECT 'OK';" | mysql --user=root --password="${MYSQL_ROOT_PASSWORD}" --host=mysql "${MYSQL_DATABASE}"
-        - php artisan migrate:refresh --seed
+        - sudo php artisan migrate:refresh --seed
 
 language: php
 php:
