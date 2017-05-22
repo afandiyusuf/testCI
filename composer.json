@@ -51,11 +51,6 @@
             "App\\": "app/"
         }
     },
-    "autoload-dev": {
-      "psr-4": {
-        "Tests\\": "tests/"
-      }
-    },
     "scripts": {
         "post-root-package-install": [
             "php -r \"copy('.env.example', '.env');\""
