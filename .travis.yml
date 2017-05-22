@@ -8,6 +8,7 @@ variables:
   MYSQL_ROOT_PASSWORD: 123qweasd
 
 before_script:
+    - bash ci/docker_install.sh > /dev/null
     - composer install --no-progress
 
 job1:
