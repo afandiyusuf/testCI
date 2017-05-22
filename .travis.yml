@@ -5,11 +5,11 @@ php:
 services:
     - mysql
 
-before_script:
+install:
   - composer self-update
   - composer install --prefer-source --no-interaction --dev
+  - npm install
 
-job1:
-    script:
-        - sudo php artisan migrate:refresh --seed
+script:
+  - sudo php artisan migrate:refresh --seed
 
