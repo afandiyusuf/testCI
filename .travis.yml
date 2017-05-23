@@ -1,4 +1,5 @@
 language: php
+
 php:
   - '5.6'
 
@@ -8,6 +9,9 @@ services:
 install:
   - composer self-update
   - composer install --prefer-source --no-interaction --dev
+
+before_script:
+  - mysql -e 'create database homestead_test;'
 
 script:
   - php artisan migrate:refresh --seed
