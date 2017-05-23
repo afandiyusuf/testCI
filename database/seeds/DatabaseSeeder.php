@@ -67,6 +67,7 @@ class DatabaseSeeder extends Seeder
 		$this->call(Rating_seeder::class);
 		$this->call(PageComicSeeder::class);
 		$this->call(author_seeder::class);
+		$this->call(RoleSeeder::class);
     	$this->call(RoleAdditionSeeder::class);
 
     }
